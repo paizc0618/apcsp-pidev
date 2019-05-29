@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+float areaFunction(float r)
+{
+  float a;
+  a = r*r*3.14;
+
+  return a;
+}
+
+int main()
+{
+  float r, rmin, rmax;
+
+  printf("Radius Min: ");
+  fgets("%f", &rmin);
+
+  printf("Radius Max: ");
+  scanf("%f", &rmax);
+
+  for (r = rmin ; r <= rmax ; r ++)
+  {
+    printf("Area: %.2f\n", areaFunction(r));
+  }
+return 0;
+}
