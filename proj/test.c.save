@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <string.h>
+
+struct Problem
+{
+  char question[256];
+  int answer;
+};
+
+void printProblem(struct Problem* problem)
+{
+  printf("Question: %s\n", problem->question);
+  printf("Answer: %d\n", problem->answer);
+}
+
+int main(int argc, char* argv[])
+{
+  //identify problem1
+  struct Problem problem1;
+  strcpy(problem1.question, "0+1");
+  problem1.answer = 1;
+  
+  //check input
+  float arg1;
+  int found = sscanf(argv[1], "%f", &arg1);
+
+  if (argc == 3)
+  {
+    if (found != 1)
+    {
+      printf("First arg is not a number\n");
+      return 1;
+    }   
+    float arg2;
+    found = sscanf(argv[2], "%f", &arg2);
+    if (found != 1)
+    {
+      printf("second arg is not a number\n");
+      return 1;
+    }
+    for (float r = arg1; r <= arg2; r++)
+    {
+      printf("Your Answer: %f\n", arg1);
+   
+ }
+  }
+
+  //print question and answer
+  printProblem(&problem1);
+}
