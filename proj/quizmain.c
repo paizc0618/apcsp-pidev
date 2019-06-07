@@ -80,6 +80,15 @@ int main(int argc, char* argv[])
     {
       printf("Your Answer: %s\n", argv[i]);
     }
+
+    int ans[256];
+    ans[1] = 1;
+    ans[2] = 2;
+    ans[3] = 3;
+    for(int x = 1; x <= 3; x++)
+    {
+      printf("The answer to question %d is %d\n", x, ans[x]);
+    }
   }
 
   //print question and answer
