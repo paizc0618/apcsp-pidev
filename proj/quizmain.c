@@ -85,6 +85,10 @@ int main(int argc, char* argv[])
     ans[1] = 1;
     ans[2] = 2;
     ans[3] = 3;
+    int input[256];
+    input[1] = arg1;
+    input[2] = arg2;
+    input[3] = arg3;
     for(int x = 1; x <= 3; x++)
     {
       printf("The answer to question %d is %d\n", x, ans[x]);
