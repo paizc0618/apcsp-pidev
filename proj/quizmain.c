@@ -91,6 +91,7 @@ int main(int argc, char* argv[])
     input[3] = arg3;
     for(int x = 1; x <= 3; x++)
     {
+      if (input[x] != ans[x])
       printf("The answer to question %d is %d\n", x, ans[x]);
     }
   }
